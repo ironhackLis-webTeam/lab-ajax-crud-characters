@@ -6,12 +6,12 @@
 
 body {
   font-family: 'Roboto';
-  color: white;
+  color: black;
   background: url("../images/pokemonwp.jpg")
 }
 
 h1, h2 {
-  color: #d8b362;
+  color: black;
 }
 
 button {
@@ -27,8 +27,8 @@ button {
   outline: none;
   position: relative;
   border-radius: 50px;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid black;
+  color: black;
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@ button {
   margin: 50px auto 0;
   padding: 10px;
   border-radius: 20px;
-  background-color: rgba(88, 98, 123, 0.7);
+  background-color: rgba(189, 197, 218, 0.7);
   text-align: center;
 }
 
