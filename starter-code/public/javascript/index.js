@@ -28,15 +28,15 @@ window.addEventListener('load', () => {
   
   // cRud --- READ in CRUD operations
   document.getElementById('fetch-all').addEventListener('click', function (event) {
-    charactersAPI.getFullList().then(characters => {
+    charactersAPI.getFullList()
+    .then(characters => {
       $container.innerHTML = ""; // Remove all the content of the container
       for (let i = 0; i < characters.length; i++) {
         $container.innerHTML += `
         <div class="character-info">
           <div class="name"><p><b>Name</b>: ${characters[i].name}</p></div>
           <div class="occupation"><p><b>Occupation</b>: ${characters[i].occupation}</p></div>
-          <div class="cartoon"> <p><b>cartoon</b>  ?:${
-            characters[i].cartoon ? "Cartoon" : "Not a cartoon"
+          <div class="cartoon"> <p><b>Is a Cartoon</b>:${characters[i].cartoon ? "Cartoon" : "Not a cartoon"
           }</p></div>
           <div class="weapon"><p><b>Weapon</b>: ${characters[i].weapon}</p></div>
         </div>
@@ -68,7 +68,8 @@ window.addEventListener('load', () => {
   });
 
   // cruD --- DELETE in CRUD operations
-  document.getElementById('delete-one').addEventListener('click', function (event) {
+  document.getElementById('delete-one')
+  .addEventListener('click', function (event) {
     event.preventDefault();
     charactersAPI
       .deleteOne($inputDeleteId.value) 

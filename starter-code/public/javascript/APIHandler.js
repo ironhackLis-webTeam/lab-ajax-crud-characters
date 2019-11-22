@@ -4,11 +4,18 @@ class APIHandler {
   }
   getFullList () {
     return axios.get(this.BASE_URL + "/characters")
-      .then(response => response.data)
-  }
+      .then(response => 
+        response.data)
+      .catch(error=>{
+        console.log(error)
+      })
+  } 
   getOne (id) {
     return axios.get(this.BASE_URL + "/characters/" + id)
       .then(response => response.data)
+      .catch(error=>{
+        console.log(error)
+      })
   }
   createOne (body) {
     return axios.post(this.BASE_URL + '/characters/', body)
@@ -17,7 +24,6 @@ class APIHandler {
       console.log(error)
     })
   }
-  // 2 parameters: the id and the body (new information for the character)
   updateOne (id, body) {
     return axios.put(this.BASE_URL + "/characters/" + id, body)
       .then(response => response.data)
